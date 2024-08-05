@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="{% static 'documentacion.css' %}">
+    <!-- Agrega enlaces a tus estilos CSS aquí si los tienes -->
+</head>
+<body>
+    <aside class='menu-lateral'>
+        <ul class='menu-lateral-opciones'>
+            <li class='menu-lateral-opciones-opcion'>Introduccion</li>
+            <li class='menu-lateral-opciones-opcion'>Endpoints</li>
+            <ul class='menu-lateral-opciones-sub'>
+                <li class='menu-lateral-opciones-sub-opcion'>api/acortar</li>
+                <li class='menu-lateral-opciones-sub-opcion'>api/personalizar</li>
+                <li class='menu-lateral-opciones-sub-opcion'>api/analizar</li>
+            </ul>
+            <li class='menu-lateral-opciones-opcion'>Ejemplos</li>
+            <ul class='menu-lateral-opciones-sub'>
+                <li class='menu-lateral-opciones-sub-opcion'>Solicitud</li>
+                <li class='menu-lateral-opciones-sub-opcion'>Respuesta</li>
+            </ul>
+        </ul>
+    </aside>
+
+    <main class='contenido-principal'>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Bienvenido a la documentación oficial de la API de Acortador de URL. Esta API proporciona un servicio 
+                eficiente y sencillo para acortar URLs, facilitando el manejo y compartición de enlaces de forma más práctica. 
+                Con la API de Acortador de URL, los desarrolladores pueden integrar fácilmente esta funcionalidad en sus 
+                aplicaciones, permitiendo a los usuarios acortar y personalizar enlaces de manera efectiva.
+            </p>
+            <h3>Descripcion</h3>
+            <p>
+                La API de Acortador de URL está diseñada para simplificar la gestión de URLs largas, convirtiéndolas en enlaces 
+                más cortos y fáciles de compartir. Ofrece funciones esenciales como acortar enlaces, personalizar URLs, analizar 
+                estadísticas y redirigir a URLs originales. Con una interfaz intuitiva y eficiente, la API proporciona una 
+                solución elegante para aquellos que buscan optimizar sus enlaces y rastrear su rendimiento.
+            </p>
+        </section>
+    
+        <section id="endpoints">
+            <h2>Endpoints</h2>
+            <!-- Agrega información sobre tus endpoints aquí -->
+            <h3>/api/endpoint1</h3>
+            <p>Descripción de lo que hace este endpoint.</p>
+            <pre><code>GET /api/endpoint1</code></pre>
+            <p>Parámetros:</p>
+            <ul>
+                <li><strong>param1:</strong> Descripción de param1.</li>
+                <!-- Agrega más parámetros según sea necesario -->
+            </ul>
+            <p>Respuesta:</p>
+            <pre><code>{ "response_key": "value" }</code></pre>
+        </section>
+    
+        <section id="examples">
+            <h2>Examples</h2>
+            <!-- Agrega ejemplos de uso de tu API aquí -->
+            <h3>Ejemplo de solicitud</h3>
+            <pre><code>curl -X GET http://tu-api.com/api/endpoint1?param1=value</code></pre>
+            <h3>Ejemplo de respuesta</h3>
+            <pre><code>{ "response_key": "value" }</code></pre>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 Tu Compañía. Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+
+
+    <script>
+        const menuLateral = document.querySelector('.menu-lateral');
+
+        menuLateral.addEventListener('click', () => {
+            menuLateral.classList.toggle('cerrado');
+        });
+    </script>
+
+    <!-- Agrega scripts o enlaces a scripts JavaScript aquí si es necesario -->
+
+</body>
+</html>
